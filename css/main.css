@@ -122,3 +122,36 @@ main section .main-exchange-container--title p{
     line-height: 1.8rem;
     color: #757575;
 }
+
+main .main-tables-container .table-grid{
+    width: 60%;
+    max-width: calc(900px*0.6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+main .main-tables-container .table-grid p{
+    margin: 1px ;
+    padding: 5px;
+    justify-content: left;
+    background-color: var(--just-white);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.94rem;
+    color: #b5b0ac;
+    
+}
+main .table-grid #left-top-corner{
+    border-top-left-radius:8px; 
+}
+main .table-grid #right-top-corner{
+    border-top-right-radius: 8px;
+}
+main .table-grid #left-bottom-corner{
+    border-bottom-left-radius: 8px;
+}
+main .table-grid #right-bottom-corner{
+    border-bottom-right-radius: 8px;
+}
