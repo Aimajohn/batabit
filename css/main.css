@@ -127,13 +127,14 @@ main section .table-container{
    flex-direction: column;
    margin: 0 auto;
     width: 90%;
+    margin: 60px auto;
     
 }
 main section .table-grid{
     display:grid;
     grid-template-areas:'title title' 'text price' 'text price' 'text price';
-    width: 80%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 0px auto;
 }
 main .table-grid p{
     background-color: var(--just-white);
@@ -146,10 +147,23 @@ main .table-grid p{
     text-align: left;
     padding-left: 15px;
 }
+
 main .table-grid .table-price{
     text-align: center;
     padding: 0;
     font-size: 1.4rem;
+}
+.table-grid .table-up-left-corner{
+    border-top-left-radius: 8px;
+}
+.table-grid .table-up-right-corner{
+    border-top-right-radius: 8px;
+}
+.table-grid .table-down-left-corner{
+    border-bottom-left-radius: 8px;
+}
+.table-grid .table-down-right-corner{
+    border-bottom-right-radius: 8px;
 }
 .table-price-down-vector::after{
     content: url('/assets/icons/trending-down.svg');
@@ -166,4 +180,26 @@ main .table-grid .table-price{
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.3rem;
+    margin-bottom: 10px;
+}
+.main-first-table-container h2{
+    color:var(--bitcoin-orange) ;
+}
+.main-second-table-container h2{
+    color:var(--secondary-blue) ;
+}
+.main-first-table-container>p, .main-second-table-container>p{ 
+    min-width: 115px;
+    height: 31px;
+    margin: 20px auto;
+    padding: 5px 10px;
+     border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.94rem;
+}
+.main-first-table-container>p{
+    background-color: var(--soft-orange);}
+.main-second-table-container>p{
+    background-color:var(--soft-blue) ;
 }
