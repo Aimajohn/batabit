@@ -122,36 +122,48 @@ main section .main-exchange-container--title p{
     line-height: 1.8rem;
     color: #757575;
 }
-
-main .main-tables-container .table-grid{
-    width: 60%;
-    max-width: calc(900px*0.6);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+main section .table-container{
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+    width: 90%;
+    
+}
+main section .table-grid{
+    display:grid;
+    grid-template-areas:'title title' 'text price' 'text price' 'text price';
+    width: 80%;
     margin: 0 auto;
 }
-main .main-tables-container .table-grid p{
-    margin: 1px ;
-    padding: 5px;
-    justify-content: left;
+main .table-grid p{
     background-color: var(--just-white);
+    margin: 1px;
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     font-weight: 500;
-    line-height: 1.94rem;
-    color: #b5b0ac;
-    
+    line-height: 4rem;
+    color: #757575;
+    text-align: left;
+    padding-left: 15px;
 }
-main .table-grid #left-top-corner{
-    border-top-left-radius:8px; 
+main .table-grid .table-price{
+    text-align: center;
+    padding: 0;
+    font-size: 1.4rem;
 }
-main .table-grid #right-top-corner{
-    border-top-right-radius: 8px;
+.table-price-down-vector::after{
+    content: url('/assets/icons/trending-down.svg');
+    padding-left: 15px;
 }
-main .table-grid #left-bottom-corner{
-    border-bottom-left-radius: 8px;
+.table-price-up-vector::after{
+    content: url('/assets/icons/trending-up.svg');
+    padding-left: 15px;
 }
-main .table-grid #right-bottom-corner{
-    border-bottom-right-radius: 8px;
+.table-container h2{
+    grid-area: title ;
+    padding-left: 10px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
 }
