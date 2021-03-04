@@ -95,7 +95,7 @@ main{
 }
 main .main-exchange-container{
     width: 100%;
-    padding: 70px 0 30px;
+    padding-top: 70px;
     text-align: center;
 }
 main section .backgroundImg{
@@ -122,19 +122,29 @@ main section .main-exchange-container--title p{
     line-height: 1.8rem;
     color: #757575;
 }
+main .main-tables-container{
+    height: 400px;
+}
 main section .table-container{
-   display: flex;
-   flex-direction: column;
-   margin: 0 auto;
-    width: 90%;
-    margin: 60px auto;
-    
+    position: absolute;
+    right: 0;
+    background-color: var(--off-white);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+     margin: 60px auto;
 }
 main section .table-grid{
     display:grid;
-    grid-template-areas:'title title' 'text price' 'text price' 'text price';
-    width: 70%;
-    margin: 0px auto;
+    grid-template-areas:'1 2 3' 'text price button' 'text price button' 'text price button' 'text price button';
+    margin: 0;
+    width: 95%;
+}
+.main-first-table-container a{
+    grid-area: button;
+    padding-left: 35px;
+  background: url(/assets/icons/right-arrow.svg) no-repeat center;
 }
 main .table-grid p{
     background-color: var(--just-white);
@@ -146,6 +156,28 @@ main .table-grid p{
     color: #757575;
     text-align: left;
     padding-left: 15px;
+}
+.table-container h2{
+    
+    padding-left: 10px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-bottom: 10px;
+}
+.main-first-table-container h2{
+    color:var(--bitcoin-orange) ;
+    grid-area: 1 ;
+}
+.main-second-table-container h2{
+    color:var(--secondary-blue) ;
+    grid-area: 2;
+}
+.main-second-table-container a{
+    grid-area: text;
+    padding-right : 35px;
+  background: url(/assets/icons/right-arrow.svg) no-repeat center;
 }
 
 main .table-grid .table-price{
@@ -167,31 +199,18 @@ main .table-grid .table-price{
 }
 .table-price-down-vector::after{
     content: url('/assets/icons/trending-down.svg');
-    padding-left: 15px;
+    padding-left: 10px;
 }
 .table-price-up-vector::after{
     content: url('/assets/icons/trending-up.svg');
-    padding-left: 15px;
-}
-.table-container h2{
-    grid-area: title ;
     padding-left: 10px;
-    text-align: left;
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-    margin-bottom: 10px;
 }
-.main-first-table-container h2{
-    color:var(--bitcoin-orange) ;
-}
-.main-second-table-container h2{
-    color:var(--secondary-blue) ;
-}
+
+
 .main-first-table-container>p, .main-second-table-container>p{ 
     min-width: 115px;
     height: 31px;
-    margin: 20px auto;
+    margin: 20px auto 20px 0;
     padding: 5px 10px;
      border-radius: 5px;
     font-family: 'Inter', sans-serif;
@@ -203,69 +222,36 @@ main .table-grid .table-price{
 .main-second-table-container>p{
     background-color:var(--soft-blue) ;
 }
-/*Cosas raras*/
-.container{
-    margin: auto;
-    background-color: rgb(177, 177, 177);
-    width: 800px;
-    padding: 30px;
-  }
-  
-  ul, li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-  }
-  
-  ul.slider{
-    position: relative;
-    width: 800px;
-    height: 300px;
-  }
-  
-  ul.slider li {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      opacity: 0;
-      width: inherit;
-      height: inherit;
-      transition: opacity .5s;
-      background:#fff;
-  }
-  
-  ul.slider li img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  ul.slider li:first-child {
+
+  .slider .table-container {
+    opacity: 0;
+    transition: opacity .5s;
+}
+.slider .table-container a{
+    opacity: 1;
+    transition: opacity .5s;
+}
+  .slider .table-container:first-child {
       opacity: 1; /*Mostramos el primer <li>*/
   }
-  
-  ul.slider li:target {
+  .slider .table-container:first-child a{
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+  .slider .table-container:target {
       opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
   }
+  /* .table-container a{
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      background-color: var(--warm-black);
+  } */
   
-  .menu{
-    text-align: center;
-    margin: 20px;
+  .main-second-table-container a {
+     top: 42%;
+    right: 10%;
+    background: url(/assets/icons/right-arrow.svg) no-repeat center;
   }
   
-  .menu li{
-    display: inline-block;
-    text-align: center;
-  }
   
-  .menu li a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: grey;
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    border-radius: 100%;
-  }
+  
