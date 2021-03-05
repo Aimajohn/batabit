@@ -127,7 +127,6 @@ main .main-tables-container{
 }
 main section .table-container{
     position: absolute;
-    right: 0;
     background-color: var(--off-white);
     width: 80%;
     display: flex;
@@ -135,16 +134,26 @@ main section .table-container{
     margin: auto;
      margin: 60px auto;
 }
-main section .table-grid{
+main section .table-monedas{
     display:grid;
-    grid-template-areas:'1 2 3' 'text price button' 'text price button' 'text price button' 'text price button';
+    grid-template-areas:'title title butt' 'text price button' 'text price button' 'text price button' 'text price button' 'p p butto';
     margin: 0;
     width: 95%;
 }
-.main-first-table-container a{
-    grid-area: button;
-    padding-left: 35px;
-  background: url(/assets/icons/right-arrow.svg) no-repeat center;
+.span{
+    grid-area: butt;
+}
+#slide1{
+    right: 0;
+}
+main section .table-comisiones{
+    display:grid;
+    grid-template-areas:'butt title title' 'button text price' 'button text price''button text price''button text price' 'butto p p';
+    margin: 0 0 0 10px;
+    width: 95%;
+}
+.span{
+    grid-area: butt;
 }
 main .table-grid p{
     background-color: var(--just-white);
@@ -158,7 +167,7 @@ main .table-grid p{
     padding-left: 15px;
 }
 .table-container h2{
-    
+    grid-area: title;
     padding-left: 10px;
     text-align: left;
     font-weight: 700;
@@ -168,16 +177,22 @@ main .table-grid p{
 }
 .main-first-table-container h2{
     color:var(--bitcoin-orange) ;
-    grid-area: 1 ;
 }
 .main-second-table-container h2{
     color:var(--secondary-blue) ;
-    grid-area: 2;
+}
+.main-first-table-container a{
+    grid-area: button;
+    padding-left: 35px;
+  background: url(/assets/icons/right-arrow.svg) no-repeat center;
+  background-size: 8px ;
+
 }
 .main-second-table-container a{
-    grid-area: text;
-    padding-right : 35px;
-  background: url(/assets/icons/right-arrow.svg) no-repeat center;
+     grid-area: button;
+     padding-right : 35px;
+     background: url(/assets/icons/left-arrow.svg) no-repeat center;
+     background-size: 8px ;
 }
 
 main .table-grid .table-price{
@@ -205,24 +220,20 @@ main .table-grid .table-price{
     content: url('/assets/icons/trending-up.svg');
     padding-left: 10px;
 }
-
-
-.main-first-table-container>p, .main-second-table-container>p{ 
-    min-width: 115px;
-    height: 31px;
-    margin: 20px auto 20px 0;
+.main-first-table-container .p-text, .main-second-table-container .p-text{ 
+    grid-area: p;
+    margin: 20px auto ;
     padding: 5px 10px;
      border-radius: 5px;
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     line-height: 1.94rem;
 }
-.main-first-table-container>p{
+.main-first-table-container .p-text{
     background-color: var(--soft-orange);}
-.main-second-table-container>p{
+.main-second-table-container .p-text{
     background-color:var(--soft-blue) ;
 }
-
   .slider .table-container {
     opacity: 0;
     transition: opacity .5s;
@@ -240,18 +251,73 @@ main .table-grid .table-price{
   .slider .table-container:target {
       opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
   }
-  /* .table-container a{
-      height: 20px;
-      width: 20px;
-      position: absolute;
-      background-color: var(--warm-black);
-  } */
-  
-  .main-second-table-container a {
-     top: 42%;
-    right: 10%;
-    background: url(/assets/icons/right-arrow.svg) no-repeat center;
+  main .main-exchange-container #patata-icon{
+     position: absolute;
+     transform: translate(-50% , -50%);
+     background: url(/assets/icons/batata.svg) no-repeat;
+     padding: 12px 21px;
   }
+  main .main-qualities-container{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto;
+      padding: 64px 0 30px;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      color: #808080;
+      background-color: var(--warm-black);
+  }
+  main .main-qualities-container h2{
+    width: 90%;
+    margin: 0 auto 24px;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 2.6rem;
+      color: var(--just-white);
+  }
+  main .main-qualities-container .qualities-subtitle{ width: 80%; margin: 0 auto;}
+  main .main-qualities-container .qualities-grid{
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      margin: 20px 0;
+  }
+  main .qualities-grid .quality-container{
+      width: 90%;
+      margin: 8px auto;
+      padding: 16px;
+      border-radius: 4px;
+      text-align: left;
+      background-color: var(--black);
+  }
+  main .qualities-grid .quality-container h3{
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      color: var(--just-white);
+      margin-bottom: 10px;
+  }
+  main .qualities-grid span{
+        display: flex;
+        height: 24px;
+        margin-bottom: 16px ;
+        width: 24px;
+        background-position: left;
+        background-size: contain;
+  }
+  main .qualities-grid .quality-time span{
+    background: url(/assets/icons/clock.svg) no-repeat;
+  }
+  main .qualities-grid .quality-eye span{
+    background: url(/assets/icons/eye.svg) no-repeat;
+  }
+  main .qualities-grid .quality-money span{
+    background: url(/assets/icons/dollar-sign.svg) no-repeat;
+  }
+  main .qualities-grid .quality-check span{
+    background: url(/assets/icons/check-circle.svg) no-repeat;
+  }
+  
   
   
   
