@@ -123,39 +123,33 @@ main section .main-exchange-container--title p{
     color: #757575;
 }
 main .main-tables-container{
-    height: 400px;
-}
-main section .table-container{
-    position: absolute;
-    background-color: var(--off-white);
-    width: 80%;
     display: flex;
     flex-direction: column;
-    margin: auto;
-     margin: 60px auto;
+    max-width: 425px;
+    justify-content: center;
+    margin: 40px auto;
+}
+main section .table-container{
+    margin: 20px auto;
+    background-color: var(--off-white);
+    width: 80%;
+    min-width: 256px;
+    max-width: 341px;
+    
 }
 main section .table-monedas{
     display:grid;
-    grid-template-areas:'title title butt' 'text price button' 'text price button' 'text price button' 'text price button' 'p p butto';
+    grid-template-areas:'title title' 'text price' 'text price' 'text price' 'text price' 'p  p';
     margin: 0;
     width: 95%;
 }
-.span{
-    grid-area: butt;
-}
-#slide1{
-    right: 0;
-}
 main section .table-comisiones{
     display:grid;
-    grid-template-areas:'butt title title' 'button text price' 'button text price''button text price''button text price' 'butto p p';
+    grid-template-areas:'title title' 'text price' 'text price''text price''text price' 'p p';
     margin: 0 0 0 10px;
     width: 95%;
 }
-.span{
-    grid-area: butt;
-}
-main .table-grid p{
+ main .table-grid p{
     background-color: var(--just-white);
     margin: 1px;
     font-family: 'Inter', sans-serif;
@@ -181,24 +175,11 @@ main .table-grid p{
 .main-second-table-container h2{
     color:var(--secondary-blue) ;
 }
-.main-first-table-container a{
-    grid-area: button;
-    padding-left: 35px;
-  background: url(/assets/icons/right-arrow.svg) no-repeat center;
-  background-size: 8px ;
-
-}
-.main-second-table-container a{
-     grid-area: button;
-     padding-right : 35px;
-     background: url(/assets/icons/left-arrow.svg) no-repeat center;
-     background-size: 8px ;
-}
-
 main .table-grid .table-price{
     text-align: center;
     padding: 0;
     font-size: 1.4rem;
+    font-weight: 300;
 }
 .table-grid .table-up-left-corner{
     border-top-left-radius: 8px;
@@ -234,40 +215,26 @@ main .table-grid .table-price{
 .main-second-table-container .p-text{
     background-color:var(--soft-blue) ;
 }
-  .slider .table-container {
-    opacity: 0;
-    transition: opacity .5s;
-}
-.slider .table-container a{
-    opacity: 1;
-    transition: opacity .5s;
-}
-  .slider .table-container:first-child {
-      opacity: 1; /*Mostramos el primer <li>*/
-  }
-  .slider .table-container:first-child a{
-    opacity: 1; /*Mostramos el primer <li>*/
-}
-  .slider .table-container:target {
-      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-  }
-  main .main-exchange-container #patata-icon{
-     position: absolute;
-     transform: translate(-50% , -50%);
-     background: url(/assets/icons/batata.svg) no-repeat;
-     padding: 12px 21px;
-  }
+ 
   main .main-qualities-container{
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      margin: 0 auto;
-      padding: 64px 0 30px;
+      position: relative;
+      width: 100%;
+      min-width: 320px;
+      padding: 60px 5px 30px;
       font-size: 1.4rem;
       line-height: 1.8rem;
       color: #808080;
       background-color: var(--warm-black);
   }
+  main .main-qualities-container #patata-icon{
+    position: absolute;
+    top: -12px;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 25px;
+    background: url(/assets/icons/batata.svg) no-repeat;
+    
+ }
   main .main-qualities-container h2{
     width: 90%;
     margin: 0 auto 24px;
@@ -284,9 +251,10 @@ main .table-grid .table-price{
   }
   main .qualities-grid .quality-container{
       width: 90%;
+      max-width: 368px;
       margin: 8px auto;
       padding: 16px;
-      border-radius: 4px;
+      border-radius: 5px;
       text-align: left;
       background-color: var(--black);
   }
@@ -300,9 +268,9 @@ main .table-grid .table-price{
   main .qualities-grid span{
         display: flex;
         height: 24px;
-        margin-bottom: 16px ;
+        margin-bottom: 10px ;
         width: 24px;
-        background-position: left;
+        background-position: center;
         background-size: contain;
   }
   main .qualities-grid .quality-time span{
@@ -316,6 +284,19 @@ main .table-grid .table-price{
   }
   main .qualities-grid .quality-check span{
     background: url(/assets/icons/check-circle.svg) no-repeat;
+  }
+  main .main-comodin-container{
+      width: 100%;
+      background: url(/assets/img/bitcoinbaby.jpg) no-repeat center / cover;
+      height: 60vh;
+    
+  }
+  main .main-comodin-container h2{
+      font-weight: 700;
+      font-size: 2.4rem;
+      text-align: center;
+      padding-top: 20%;
+      color: var(--just-white);
   }
   
   
