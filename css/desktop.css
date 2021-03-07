@@ -1,0 +1,17 @@
+main .main-plans-container .cards-container article{
+    margin: 0 20px;
+}
+footer{
+    padding: 15px 0;
+}
+Footer .footer-grid{
+    width: 90%;
+    grid-template-areas: 'list list list list logo' ;
+    grid-template-columns: min-content min-content min-content min-content  1fr;
+}
+Footer .footer-grid p{
+    margin: 0 10px;
+}
+Footer .footer-grid img{
+    justify-self: flex-end;
+}

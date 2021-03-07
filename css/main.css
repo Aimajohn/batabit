@@ -27,13 +27,11 @@ html{
 }
 header{
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     width: 100%;
     min-width: 320px;
     height: 334px;
-    text-align: center;
     background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
 }
 header img{
@@ -41,6 +39,7 @@ header img{
     height: 24px;
     margin-top: 60px;
     align-self: center;
+    justify-self: center;
 }
 header .header--title-container{
     width: 90%;
@@ -50,6 +49,7 @@ header .header--title-container{
     margin-top: 40px;
     align-self: center;
     text-align: center;
+    justify-self: center;
 }
 header .header--title-container h1{
     font-size: 2.4rem;
@@ -63,6 +63,7 @@ header .header--title-container p{
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: var(--just-white);
+    justify-self: center;
 }
 .header--title-container .header--button{
     position: absolute;
@@ -127,7 +128,6 @@ main section .main-exchange-container--title p{
 main .main-tables-container{
     display: flex;
     flex-direction: column;
-    max-width: 425px;
     justify-content: center;
     margin: 40px auto;
 }
@@ -136,7 +136,7 @@ main section .table-container{
     background-color: var(--off-white);
     width: 80%;
     min-width: 256px;
-    max-width: 341px;
+    max-width: 270px;
 
 }
 main section .table-monedas{
@@ -238,13 +238,14 @@ main .table-grid .table-price{
  }
   main .main-qualities-container h2{
     width: 90%;
-    margin: 0 auto 24px;
+    text-align: center;
+    margin:0 auto 24px;
       font-size: 2.4rem;
       font-weight: 700;
       line-height: 2.6rem;
       color: var(--just-white);
   }
-  main .main-qualities-container .qualities-subtitle{ width: 80%; margin: 0 auto;}
+  main .main-qualities-container .qualities-subtitle{ width: 80%; margin: 0 auto; text-align: center;}
   main .main-qualities-container .qualities-grid{
       display: grid;
       grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -288,8 +289,8 @@ main .table-grid .table-price{
   }
   main .main-comodin-container{
       width: 100%;
-      background: url(/assets/img/bitcoinbaby.jpg) no-repeat center / cover;
-      height: 60vh;
+      background: url(/assets/img/bitcoinbaby\ 1.jpg) no-repeat center / cover;
+      height: 70vh;
       max-height: 400px;
 
   }
@@ -324,13 +325,11 @@ main .table-grid .table-price{
   }
   main .cards-container{
       display: flex;
-      /* justify-content: center; */
       width: 100%;
       min-width: 320px;
       overflow-x: scroll;
       overscroll-behavior-x:contain;
       scroll-snap-type:x proximity;
-     /* overflow: hidden; */
   }
   main .cards-container::-webkit-scrollbar {
     background-color: var(--soft-orange);
@@ -438,33 +437,23 @@ main .table-grid .table-price{
   }
   Footer .footer-grid{
       display: grid;
-      grid-template-areas: 'list logo' 'list sub';
-      width: 70%;
+      grid-template-areas: 'list logo' 'list logo' 'list logo' 'list logo' ;
+      width: 80%;
       margin: 0 auto;
       justify-content: space-between;
       align-items: center;
   }
-  .footer-grid ul{
-      grid-area: list;
-      list-style: none;
-  }
-  .footer-grid ul li{
+  Footer .footer-grid p{
       margin: 8px 0;
   }
-  Footer .footer-grid li a{
+  Footer .footer-grid p a{
     font-weight: 500;
     font-size: 1.4rem;
     color: var(--just-white);
     text-decoration: none;
   }
   Footer .footer-grid img{
+      grid-area: logo;
       justify-self: center;
-      align-self: flex-end;
-      margin-bottom: 5px;
-  }
-  Footer .footer-grid span{
-      margin-top: 5px;
-      align-self: flex-start;
-      font-size: .8rem;
-      color: var(--just-white);
+      align-self: center;
   }
