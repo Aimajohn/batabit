@@ -1,3 +1,49 @@
+header{
+    grid-template-areas: 'logo header button' 'logo header button';
+    grid-template-columns: 32% 36% 32%;
+    height: 170px;
+    background: linear-gradient(90deg, #201E1C 15%, #F7931A 100%);
+}
+header figure{
+    grid-area: logo;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+}
+header img{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    justify-self: left;
+    width: 250px;
+    height: 40px;
+}
+header .header--title-container{
+    width: 80%;
+    grid-area: header;
+    text-align: left;
+    margin: 30px 0 30px;
+    height: auto;
+}
+header .header--title-container h1{
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+}
+header .header--title-container p{
+    display: none;
+}
+header .header--button{
+    position: static;
+    grid-area: button;
+    transform: translate(0%, 0%);
+    justify-self: center;
+    align-self: center;
+}
+header .header--button:hover{
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.26) 0 4px 8px;
+}
 main .main-plans-container .cards-container article{
     margin: 0 20px;
 }
