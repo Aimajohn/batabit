@@ -90,7 +90,7 @@ header .header--button span {
     width: 13px;
     height: 8px;
     margin-left: 10px;
-    background: url('../../databit/assets/icons/down-arrow.svg') no-repeat center
+    background: url('../../batabit/assets/icons/down-arrow.svg') no-repeat center
 }
 main{
     width: 100%;
@@ -104,7 +104,7 @@ main .main-exchange-container{
     text-align: center;
 }
 main section .backgroundImg{
-    background: url(../../databit/assets/img/Bitcoin.svg) no-repeat center/cover ;;
+    background: url(../../batabit/assets/img/Bitcoin.svg) no-repeat center/cover ;;
     width: 200px;
     height: 200px;
     margin: 0 auto 40px;
@@ -197,11 +197,11 @@ main .table-grid .table-price{
     border-bottom-right-radius: 8px;
 }
 .table-price-down-vector::after{
-    content: url('../../databit/assets/icons/trending-down.svg');
+    content: url('../../batabit/assets/icons/trending-down.svg');
     padding-left: 10px;
 }
 .table-price-up-vector::after{
-    content: url('../../databit/assets/icons/trending-up.svg');
+    content: url('../../batabit/assets/icons/trending-up.svg');
     padding-left: 10px;
 }
 .main-first-table-container .p-text, .main-second-table-container .p-text{
@@ -235,7 +235,7 @@ main .table-grid .table-price{
     left: calc(50% - 20px);
     width: 40px;
     height: 25px;
-    background: url(../../databit/assets/icons/batata.svg) no-repeat;
+    background: url(../../batabit/assets/icons/batata.svg) no-repeat;
 
  }
   main .main-qualities-container h2{
@@ -278,20 +278,20 @@ main .table-grid .table-price{
         background-size: contain;
   }
   main .qualities-grid .quality-time span{
-    background: url(../../databit/assets/icons/clock.svg) no-repeat;
+    background: url(../../batabit/assets/icons/clock.svg) no-repeat;
   }
   main .qualities-grid .quality-eye span{
-    background: url(../../databit/assets/icons/eye.svg) no-repeat;
+    background: url(../../batabit/assets/icons/eye.svg) no-repeat;
   }
   main .qualities-grid .quality-money span{
-    background: url(../../databit/assets/icons/dollar-sign.svg) no-repeat;
+    background: url(../../batabit/assets/icons/dollar-sign.svg) no-repeat;
   }
   main .qualities-grid .quality-check span{
-    background: url(../../databit/assets/icons/check-circle.svg) no-repeat;
+    background: url(../../batabit/assets/icons/check-circle.svg) no-repeat;
   }
   main .main-comodin-container{
       width: 100%;
-      background: url(../../databit/assets/img/bitcoinbaby\ 1.jpg) no-repeat center / cover;
+      background: url(../../batabit/assets/img/bitcoinbaby\ 1.jpg) no-repeat center / cover;
       height: 70vh;
       max-height: 400px;
 
@@ -407,7 +407,7 @@ main .table-grid .table-price{
   main .main-plans-container .cards-container article a p::after{
       position: absolute;
       transform: translate(10% , -16%);
-      content: url('../../databit/assets/icons/east_white_24dp.svg');
+      content: url('../../batabit/assets/icons/east_white_24dp.svg');
   }
   main .main-plans-container .cards-container article a{
       display: flex;
